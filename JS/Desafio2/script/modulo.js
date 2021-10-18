@@ -1,7 +1,10 @@
 window.onload=function(){
     function resultadoCep(dadosCep){
         for(let campo in dadosCep){
-            
+            if(document.querySelector(`#${campo}`)){
+                document.querySelector(`#${campo}`).value= dadosCep[campo];
+            }
+        }
     }
 
     let dadosCep = async function(cep){
